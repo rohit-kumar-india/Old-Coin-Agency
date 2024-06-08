@@ -1,20 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {NgForm} from '@angular/forms';
-import { Details } from './Details';
+import { Details } from '../Details';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-contact-form',
+  templateUrl: './contact-form.component.html',
+  styleUrls: ['./contact-form.component.css']
 })
-export class AppComponent {
+export class ContactFormComponent implements OnInit {
   submitted=false;
-  title = Details.title;
   phone = Details.phone;
-  whatsapp = Details.whatsapp;
-
+  email = Details.email;
+  address = Details.address;
   constructor(private http:HttpClient) { }
+
+  ngOnInit(): void {
+  }
 
   onSubmit(data: any,form : NgForm){
     console.warn(data);

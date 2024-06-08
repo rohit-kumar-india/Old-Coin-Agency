@@ -1,0 +1,117 @@
+<p>dashboard works!</p>
+<section >
+	<div style="height:30px ;"></div>
+	<div class="dashboard-top"></div>
+</section>
+
+<section class="wel">
+	<div class="container"> 
+		<div class="row" style="margin-top :30px;text-align: center;">
+			<div class="col-md-9 center">
+				<div class="heading center">
+					<h1 class="dashboard-heading">Welcome To {{title}}</h1> 
+					<h5 class="">we are happy to make you happier</h5>
+				</div>      
+				<br>
+				<div class="center">
+					<p style="width:100%">{{title}} helps you to buy and sell your Old Coins and provides the best price with wide selection of our Old coins which makes your experiance easy & happy.    We remain committed to our mission of “ creating happy Customers ”.   We arrange All kinds of Old Coins from all accross India. {{title}} brings all the services related to Buying and selling of old coins in India under single website. We have been providing excellent services to our clients since the date of foundation. We are a premium Old Coin distributor based in Delhi and provide our best servcices all over India.</p>
+					<p style="width:100%">We buy or sell 100% orignal coins only and also provide Old Coins at very reasonable prices. Our first priority is to provide the best services to our clients. To become one of the favored selections of our customers, we are working in our best way. Owing to our quality services assured assortment to budget-friendly rates and keep everythings transparent with the clients, we have been applauded in the domain.</p> 
+				</div>
+			</div> 
+			<div class="col-md-3 col-sm-12">
+                <div style="border: 2px solid rgb(240, 59, 59); padding: 5px; box-shadow: 0 0 15px #f78888;">
+                    <table class="table border" id="enquiry">
+                        <tbody>
+                            <tr>
+                                <th colspan="2" style="color:whitesmoke; font-size: larger; font-weight: bold;">पुराने सिक्के बेचे और ख़रीदे !</th>
+                            </tr>
+                            <tr>
+                                <th colspan="2" style="color:whitesmoke; font-size: large;">अगर आपके पास भी है पुराने सिक्के या नोट तो आप उसे बेच सकते है !</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="butHolder" ><a href="tel:{{phone}}" class="m-btn m-btn-theme section-proposition-btn btn btn-b mt-btn btn-msg" style="margin:10px;color:#fff;font-size: large;font-weight: bold;"><i class="fa fa-phone" aria-hidden="true"></i> Call Now</a></div>    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div><a href="http://wa.me/{{whatsapp}}" target="_blank" class="m-btn m-btn-theme section-proposition-btn btn btn-b mt-btn btn-success" style="margin:10px;color:#fff;font-size: large;font-weight: bold;"><i class="fa fa-whatsapp" aria-hidden="true"></i> Whatsapp Now</a></div>    
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+		</div>
+	</div>
+</section>
+
+
+<section class="tour-list">
+	<div class="container">
+		<div class="row" style="margin-top :70px;text-align: center; ">
+			<h1 class="dashboard-heading">Sell Your Old Coins at one place with Ease </h1>
+			<h5 class="" style="margin-bottom: 35px;">{{title}} offers unique Old Coins for Customers in India. We accept multiple of Old Coins for you...  </h5>
+			<div class="row">
+                <div class="col-md-3" style="margin-bottom:20px;" *ngFor="let p of coins">
+                    <div style="border: 2px solid rgb(240, 59, 59); padding: 5px; box-shadow: 0 0 15px #f78888;">
+                        <div class="Coinpic">
+                            <img src="assets/images/{{p.pic}}.jpg" width="100%" height="250px">
+                        </div>
+                        <div>
+                            <table class="table table-bordered coin" >
+                                <tbody>
+                                    <tr>
+                                        <th colspan="2" style="color:whitesmoke;background-color: red;">{{p.name}}</th>
+                                    </tr>
+                                    <tr style=" font-weight: bolder; font-size: larger; ">
+                                        <td>Price</td>
+                                        <td style="color:red">{{p.price}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><marquee style="background: linear-gradient(to bottom, rgb(255, 255, 255) 0%,rgb(164, 232, 195) 100%);color: red;">Book Now For Get Extra Discount</marquee></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                                <div class="butHolder" ><a href="tel:{{phone}}" class="m-btn m-btn-theme section-proposition-btn btn btn-b mt-btn btn-msg" style="margin:10px;color:#fff"><i class="fa fa-phone" aria-hidden="true"></i> Call Now</a></div>
+                                            	
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
+</section>
+
+
+
+
+<section class="">
+	<div class="container">
+		<div class="row" style="margin-top :50px;text-align: center; ">
+			<div class="col-md-12 center" >
+				<h1 class="dashboard-heading">Our Services </h1> 
+				<h5 style="margin-bottom: 35px;">We Serve Best</h5>
+			</div>
+		</div>
+		
+		<app-services></app-services>
+		
+	</div>
+</section>
+
+<section class="">
+	<div class="container">
+		<div class="row" style="margin-top :50px;text-align: center; ">
+			<div class="col-md-12 center" >
+				<h1 class="dashboard-heading">Contact Details</h1> 
+				<h5>We are here to help You</h5>
+			</div>
+		</div>
+	</div>
+	<app-contact-form></app-contact-form>
+</section>

@@ -1,0 +1,55 @@
+<section class="contact">
+	<div class="container">
+	<div class="contactInfo">
+		<div class="box">
+			<div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+			<div class="text">
+				<h3>Address</h3>
+				<p>{{address}}</p>
+			</div>
+		</div>
+		<div class="box">
+			<div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+			<div class="text">
+				<h3>Phone</h3>
+				<p>{{phone}}</p>
+			</div>
+		</div>
+		<div class="box">
+			<div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+			<div class="text">
+				<h3>Email</h3>
+				<p>{{email}}</p>
+			</div>
+		</div>
+	</div>
+	<div class="contactForm">
+		<form #contactus="ngForm" (ngSubmit)="onSubmit(contactus.value,contactus)">
+			<h2 class="text-center">Send Message</h2>
+			<div class="inputBox">
+				<input type="text" ngModel name="name" required>
+				<span>Full Name</span>
+			</div>
+			<div class="inputBox">
+				<input type="text" ngModel name="email" required>
+				<span>Email</span>
+			</div>
+			<div class="inputBox">
+				<input type="text" ngModel name="mobile" required>
+				<span>Mobile</span>
+			</div>
+			<div class="inputBox">
+				<textarea name="message" ngModel required></textarea>
+				<span>Type Your Message...</span>
+			</div>
+			<div style="color: red; height:25px; text-align: center;">
+				<div style="color: red;" *ngIf="contactus.invalid && contactus.touched">Please Fill all the fields correctly</div>
+				<div style="color: rgb(74, 243, 74);" *ngIf="submitted">Submitted Successfully</div>
+			</div>
+			<div class="inputBox text-center" >
+				<input type="submit" [disabled]="contactus.invalid" value="Send">
+			</div>
+		</form>
+	</div>
+</div>
+</section>

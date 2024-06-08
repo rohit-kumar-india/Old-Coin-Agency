@@ -1,0 +1,6 @@
+.top{
+    background: url(../../assets/images/coin-pic.jpg);
+    height: 300px;
+    background-size: cover;
+    color: red;
+}

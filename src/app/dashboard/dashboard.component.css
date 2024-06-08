@@ -1,0 +1,65 @@
+.dashboard-top{
+    background: url(../../assets/images/old-coin.jpg);
+    height: 500px;
+    background-size: cover;
+    color: red;
+}
+
+.dashboard-tour-list{
+    background-color: rgb(91, 85, 76);
+    visibility: 80%;
+    color: white;
+    text-align: center;
+    font-size: larger;
+    margin: 7px;
+    height: 70px;
+    padding: 15px;
+    border-radius:35px ;
+    
+}
+
+.dashboard-tour-list:hover{
+    background-color: rgb(236, 62, 62);
+    font-weight: bold;
+}
+
+.dashboard-heading{
+    /*background: linear-gradient(to bottom, rgb(249, 4, 4) 0%,rgb(249, 142, 3) 100%);
+    color: white;*/
+    border: 2px solid rgb(240, 59, 59); 
+    padding: 5px; 
+    box-shadow: 0 20px 15px 15px #f78888;
+}
+
+/* Coin List */
+.butHolder a{
+    background:red;
+}
+.butHolder{
+    text-align: center;
+}
+.coin{
+    font-size: 15px;
+    color: white;
+    background-color:#353131 ;
+}
+.Coinpic img{
+    height: 250px;
+    background-size: cover;
+}
+    
+#enquiry 
+{
+    border-collapse: collapse;
+    width: 100%;
+    background-color:#fc9657 ;
+}    
+    
+@media screen and (max-width: 720px) {
+    .dashboard-top{
+        
+        height: 200px;
+        
+    }
+  }
+
